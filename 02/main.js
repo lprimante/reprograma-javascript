@@ -48,3 +48,43 @@ var appointments = {
     "person": "Mariana Silva"
   }
 }
+
+var agenda = function () {
+  for(var prop in appointments) {
+    //console.log("Hoje às ", prop, "o professor ", appointments[prop].person, "dará aula de ", appointments[prop].title)
+
+    var schedule = document.querySelector('#schedule')
+
+    var appointment = document.createElement("div")
+    appointment.setAttribute("class", "appointment")
+
+    var time = document.createElement("div")
+    time.setAttribute("class","time")
+
+    var clock = document.createElement("p")
+    clock.innerHTML = prop
+
+    var circle = document.createElement("div")
+    circle.setAttribute("class", "circle")
+
+    var event = document.createElement("div")
+    event.setAttribute("class", "event")
+
+    var h2 = document.createElement("h2")
+    h2.innerHTML = appointments[prop].title
+
+    var personP = document.createElement("p")
+    personP.innerHTML = appointments[prop].person
+
+    schedule.appendChild(appointment)
+    appointment.appendChild(time)
+    time.appendChild(clock)
+    appointment.appendChild(circle)
+    appointment.appendChild(event)
+    event.appendChild(h2)
+    event.appendChild(personP)
+
+  }
+}
+
+agenda()
