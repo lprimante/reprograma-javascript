@@ -85,6 +85,16 @@ var agenda = function () {
     event.appendChild(personP)
 
   }
+
+var horario = new Date()
+var segundos = horario.getTime()
+
+var horarioAula = prop.split("h")
+
+var compararHorario 
+
+console.log (horario.getTime() )
 }
 
 agenda()
+
