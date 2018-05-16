@@ -50,6 +50,12 @@ var appointments = {
 }
 
 var agenda = function () {
+
+  var now = (new Date()).getTime()
+  var smallestTimeDifference = Infinity
+  var redCircle = undefined
+  console.log(now)
+
   for(var prop in appointments) {
     //console.log("Hoje às ", prop, "o professor ", appointments[prop].person, "dará aula de ", appointments[prop].title)
 
@@ -84,17 +90,24 @@ var agenda = function () {
     event.appendChild(h2)
     event.appendChild(personP)
 
+    var timeAppointement = new Date()
+    timeAppointement.setHours(parseInt(prop.split("h")[0]))
+    timeAppointement.setMinutes(parseInt(prop.split("h")[1]))
+    timeAppointement = timeAppointement.getTime()
+    var difference = Math.abs(timeAppointement - now)
+    if (difference < smallestTimeDifference)
+      smallestTimeDifference = difference
+      redCircle = circle
+
   }
-
-var horario = new Date()
-var segundos = horario.getTime()
-
-var horarioAula = prop.split("h")
-
-var compararHorario 
-
-console.log (horario.getTime() )
 }
 
+redCircle.style.backgroundColor = "red"
 agenda()
+
+// var horario = new Date()
+// var segundos = horario.getTime()
+// var horarioAula = prop.split("h")
+// var compararHorario 
+// console.log (horarioAula)
 
