@@ -35,30 +35,4 @@ function getData(url) {
     // Envia a request.
     req.send()
   })
-} 
-
-const container = document.getElementById("container")
-
-
-container.innerHTML = "Carregando..."
-
-const p = getData("http://revistapolen.com/wp-json/wordpress-popular-posts/v1/popular-posts").then(function(response) {
-  const jsonResponse = JSON.parse(response)
-  container.innerHTML = ""
-  for (const post of jsonResponse) {
-    const div = document.createElement("div")
-    const h2 = document.createElement("h2")
-    const paragraph = document.createElement("p")
-    
-    // container.innerHTML = container.innerHTML + '<p>' + post['title']['rendered'] + '</p>' + '<p>' + post['excerpt']['rendered'] + '</p>'
-    h2.textContent = post['title']['rendered']
-    paragraph.innerHTML = post['excerpt']['rendered']
-
-    container.appendChild(div)
-    div.classList.add("row")
-    div.appendChild(h2)
-    div.appendChild(paragraph)
-  }
-}, function(error) { 
-  container.innerHTML = error
-})
+}
