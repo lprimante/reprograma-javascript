@@ -2,20 +2,32 @@
 
  Plano de aulas para a semana do dia 14/05/2017 - 25/05/2017, sobre Javascript.
  
- ## Aula 01 
+ ## Exercício 01 
  
- Lista de tarefas que adiciona novas tarefas através de um input, quando clicada a tarefa é marcada como concluída (com risco). 
- Se clicado novamente a tarefa volta a ficar como toDo. 
+> https://codepen.io/brizental/pen/qYLQjN
+
+O objetivo desse exercicio era adicionar o javascript para tornar esse app de lista de tarefas interativo. Quando o usuario adicionasse um nove texto ao input e submetesse o formulario, o input deveria ser resetado e o texto adicionado deveria se tornar uma nova tarefa na lista. Quando uma tarefa da lista fosse cliacada, ela deveria aparecer com uma cor mais clara e um risco no meio.
  
- ## Aula 02
+ ## Exercicio 02
+
+> https://codepen.io/brizental/pen/QrzJpZ
+
+O objetivo desse exercicio era usar o objeto `appointments` do javascript para criar o HMTL que mostra o conteudo dele para o usuario. Alem disso, um desafio era pintar somente a bolinha do horario mais proximo do horario atual de vermelho.
  
- Agenda de atividades estilo linha do tempo, feita através de dados obtidos de um objeto (simulando um JSON). 
- Adicional, a bolinha que indica a atividade fica vermelha quando o horário se aproxima. 
+ ## Exercício 03 
+
+> https://codepen.io/brizental/pen/PeXxbE
+
+O objetivo desse exercicio era criar barras de progresso que seriam prenchidas de acordo com o atributo `data-percentage` de cada elemento na pagina com a classe `progress`.
  
- ## Aula 03 
+ ## Exercicio 04
+
+> https://codepen.io/brizental/pen/WJLYxK
+
+O objetivo desse exercicio era criar um slider que muda o volume da musica sendo tocada pelo nosso HTML.
+
+O Chrome mudou a sua politica de audios em abril/2018 e nao permite mais o atributo "autoplay" que e necessario para que esse exercicio funcione como esperado. Portanto, ele precisa ser aberto no Firefox.
  
- São 5 barras de progresso que possuem uma animação quando a página é carregada e as cores são sortidas cada vez que isso ocorre. 
+ ## Exercício 05
  
- ## Aula 04
- 
- Um botão deslizante que aumenta o volume do audio, simulando um botão do Spotify.
+ Fazer uma requisição a uma API do wordpress.
